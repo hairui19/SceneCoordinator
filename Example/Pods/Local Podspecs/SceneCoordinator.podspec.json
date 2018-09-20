@@ -1,0 +1,22 @@
+{
+  "name": "SceneCoordinator",
+  "version": "0.1.0",
+  "summary": "A short description of SceneCoordinator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/linhairui19@gmail.com/SceneCoordinator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linhairui19@gmail.com": "hairui@sorealprop.com"
+  },
+  "source": {
+    "git": "https://github.com/linhairui19@gmail.com/SceneCoordinator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SceneCoordinator/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module SceneCoordinator {
+  umbrella header "SceneCoordinator-umbrella.h"
+
+  export *
+  module * { export * }
+}

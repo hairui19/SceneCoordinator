@@ -1,0 +1,6 @@
+framework module Pods_SceneCoordinator_Example {
+  umbrella header "Pods-SceneCoordinator_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
