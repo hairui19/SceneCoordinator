@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SceneCoordinator: 999bc2265b8a6a735b20844c52b6c0b69afd6d79
+  SceneCoordinator: 973bf4d34d67768ebaff2f628872724a024fd1a8
 
 PODFILE CHECKSUM: 0f8bde9c2b5990f323bdc14fb2851f2b037694e9
 

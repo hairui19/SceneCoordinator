@@ -8,23 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		20CD77ED0137D0545130735CBEAE5216 /* Pods-SceneCoordinator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2E033A7E8ECB96DBDE26A6A4A0FB33A /* Pods-SceneCoordinator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24D5D416E08568848CB32B3E0EFB8C70 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E5A6C0112322192E5A5A50110519E /* Stack.swift */; };
+		3E9DE17FC3EDA8730AF4B67990D3C9F4 /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3A905A1ED61A34225934605A7B9CC /* SceneType.swift */; };
 		46FA966BA874D456E9525642580681D2 /* Pods-SceneCoordinator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C900CE713C81D6237B560F7954F795 /* Pods-SceneCoordinator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5598FA51A91F1D416A3DE3D60D76018A /* SceneModalTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6F4A53512C30E2D41B1CAA32A85B02 /* SceneModalTransitionStyle.swift */; };
 		59D2B061C789E72F70AABA769DE0E660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		7355A1632B77B02769208F2B1C6D4D67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		7468F26EFE49535E0E34128AAEE82851 /* SceneCoordinatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EC0E9CA3E704C56CAC83F76DBA782 /* SceneCoordinatorError.swift */; };
+		8BDC7560AE1755ADC0C05D7D1D6AD5C2 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D5787858B20DDD38BA1984830D6C8 /* Spider.swift */; };
+		8D09E87C7101C82EC1A12C35AE53CEE5 /* UIViewController+SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D32405BEE02E9C02061B2ED5A3A062E /* UIViewController+SceneCoordinator.swift */; };
+		9EA1F06C144B0E28651A26F22BF04CC6 /* SceneModalPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B415DC48EF17B3A27DE73705BD5607 /* SceneModalPresentationStyle.swift */; };
+		C511D075A577A5C22DC9873F34E251FF /* SceneCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 364001D75C2870C621A4EDA5C92AD06B /* SceneCoordinator-dummy.m */; };
 		D12E0BAD23727B1BB2DBB3852EF66D61 /* Pods-SceneCoordinator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7592D834005C9D7A7C46ED493191AF /* Pods-SceneCoordinator_Example-dummy.m */; };
-		DEBA32B9C4EB41E833241B9E22803363 /* SceneCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AF5CC7C293892101742210244201F2 /* SceneCoordinator-dummy.m */; };
+		D7D89A861CE02BBC78940217F270F010 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAB95FA5FCF90575EB0146D5D31A8D /* SceneCoordinator.swift */; };
+		E3B91B789E9F1786C342D90E4C5E7349 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAE562B7260A23E9B14C6F16A1665F /* SceneCoordinatorType.swift */; };
 		ED1E6D3D233AC2CBBE1FBE50E30B2659 /* Pods-SceneCoordinator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 044418225838ED265B2872339C876911 /* Pods-SceneCoordinator_Tests-dummy.m */; };
-		F1CABD6DC6501291E06FF39D7C9915B3 /* SceneCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3E6C726498E8361AA6CC418D937928 /* SceneCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1CABD6DC6501291E06FF39D7C9915B3 /* SceneCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17527959A6FD89455F6104E5FA8815AA /* SceneCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3234CA572015D3E9170208D0827E798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		FE8A836E21539B980089A3B7 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A836A21539B980089A3B7 /* SceneCoordinatorType.swift */; };
-		FE8A836F21539B980089A3B7 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A836B21539B980089A3B7 /* SceneCoordinator.swift */; };
-		FE8A837021539B980089A3B7 /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A836C21539B980089A3B7 /* SceneType.swift */; };
-		FE8A837121539B980089A3B7 /* SceneCoordinatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A836D21539B980089A3B7 /* SceneCoordinatorError.swift */; };
-		FE8A837321539B9E0089A3B7 /* UIViewController+SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837221539B9E0089A3B7 /* UIViewController+SceneCoordinator.swift */; };
-		FE8A837821539BA50089A3B7 /* SceneModalTransitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837421539BA40089A3B7 /* SceneModalTransitionStyle.swift */; };
-		FE8A837921539BA50089A3B7 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837521539BA40089A3B7 /* Stack.swift */; };
-		FE8A837A21539BA50089A3B7 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837621539BA40089A3B7 /* Spider.swift */; };
-		FE8A837B21539BA50089A3B7 /* SceneModalPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837721539BA50089A3B7 /* SceneModalPresentationStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,49 +45,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		015D5787858B20DDD38BA1984830D6C8 /* Spider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
+		02969A598C7A837CB9A63F2A473B47F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044418225838ED265B2872339C876911 /* Pods-SceneCoordinator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SceneCoordinator_Tests-dummy.m"; sourceTree = "<group>"; };
 		05C5B678BF7F2A5762450641CF97703B /* Pods-SceneCoordinator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SceneCoordinator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		14A6CBD6D9E112FE6FC19A342CF8004A /* Pods_SceneCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneCoordinator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E97D712E4A77AABBDEC6DA788E95C7C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		14A6CBD6D9E112FE6FC19A342CF8004A /* Pods_SceneCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SceneCoordinator_Example.framework; path = "Pods-SceneCoordinator_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17527959A6FD89455F6104E5FA8815AA /* SceneCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-umbrella.h"; sourceTree = "<group>"; };
 		183A46E956D3E9835B40BA2A49F2254D /* Pods-SceneCoordinator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SceneCoordinator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		183C14F96FCB238A2CB9BB2596C3FD12 /* Pods-SceneCoordinator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		199E6B8C1279EA3785F08026A81AFE4E /* Pods-SceneCoordinator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1D32405BEE02E9C02061B2ED5A3A062E /* UIViewController+SceneCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+SceneCoordinator.swift"; sourceTree = "<group>"; };
 		1F7592D834005C9D7A7C46ED493191AF /* Pods-SceneCoordinator_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SceneCoordinator_Example-dummy.m"; sourceTree = "<group>"; };
+		364001D75C2870C621A4EDA5C92AD06B /* SceneCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SceneCoordinator-dummy.m"; sourceTree = "<group>"; };
+		367E832EE1876A46A3006BA2C0E63ECB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3F4EC0E9CA3E704C56CAC83F76DBA782 /* SceneCoordinatorError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorError.swift; sourceTree = "<group>"; };
 		402D76FA5AAE20158BE2345FAED3D521 /* Pods-SceneCoordinator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SceneCoordinator_Tests.modulemap"; sourceTree = "<group>"; };
 		48DB172F94C00D60C361578BCE6EA876 /* Pods-SceneCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4908DB1B5D938F2D55B30DA2E4C864E5 /* Pods-SceneCoordinator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Tests-resources.sh"; sourceTree = "<group>"; };
 		528EDE374D56F72D0A1E870F39F4F770 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		541540491495C57BD64A5A35E0534D3A /* SceneCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-prefix.pch"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		63EAE562B7260A23E9B14C6F16A1665F /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		641264444B0D56DA5AD4A094BCE153B9 /* Pods-SceneCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
-		692580D73CAB3C143E4018D89C8678F6 /* SceneCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SceneCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6F0E5A6C0112322192E5A5A50110519E /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		73F6047476B78EDC0E0AD1E505691900 /* Pods-SceneCoordinator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SceneCoordinator_Example.modulemap"; sourceTree = "<group>"; };
+		7CB3A905A1ED61A34225934605A7B9CC /* SceneType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
 		82C900CE713C81D6237B560F7954F795 /* Pods-SceneCoordinator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SceneCoordinator_Tests-umbrella.h"; sourceTree = "<group>"; };
+		84B415DC48EF17B3A27DE73705BD5607 /* SceneModalPresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneModalPresentationStyle.swift; sourceTree = "<group>"; };
 		8B59DE8BC6A28FE8CCA33A0C3A70FA31 /* Pods-SceneCoordinator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		909E03D1FE9B65281A51ACF8DC077625 /* Pods_SceneCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneCoordinator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98E2E463308BE5D96180ADBA4B08664C /* SceneCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SceneCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909E03D1FE9B65281A51ACF8DC077625 /* Pods_SceneCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SceneCoordinator_Tests.framework; path = "Pods-SceneCoordinator_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98E2E463308BE5D96180ADBA4B08664C /* SceneCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SceneCoordinator.framework; path = SceneCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C485A5ACEEAC440FF9696F034627CCD /* Pods-SceneCoordinator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SceneCoordinator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A03203537AC0CA6A5B4C68C542CC44A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A5AF5CC7C293892101742210244201F2 /* SceneCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SceneCoordinator-dummy.m"; sourceTree = "<group>"; };
-		A92BA80901EFE9B4FB1CD62A4717D8FE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		AE3E6C726498E8361AA6CC418D937928 /* SceneCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-umbrella.h"; sourceTree = "<group>"; };
-		B65BABB33FDFEE279ADC6BEC991ECFB9 /* SceneCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SceneCoordinator.modulemap; sourceTree = "<group>"; };
-		C66693E879B7F80580ADBBF5D776A98D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F646426097F0369EC571CA405CCF3C2 /* SceneCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SceneCoordinator.xcconfig; sourceTree = "<group>"; };
+		CCE19A91F06CD85719385F5DA7336B54 /* SceneCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SceneCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1A732A04777E246C9F54F677E9EA56C /* Pods-SceneCoordinator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Example-resources.sh"; sourceTree = "<group>"; };
+		D54612B15069BD4C4CF8D56B61155F76 /* SceneCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SceneCoordinator.modulemap; sourceTree = "<group>"; };
+		D7BAB95FA5FCF90575EB0146D5D31A8D /* SceneCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		E2DC4B987E047C0A7702C5708F801428 /* Pods-SceneCoordinator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SceneCoordinator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E827E4F7BE5D674F362FC43B084590E3 /* SceneCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SceneCoordinator.xcconfig; sourceTree = "<group>"; };
 		E85262536EE24DC36C2AE6B13B4CEDDC /* Pods-SceneCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EA8337BD6330D58D4B670C410F413587 /* SceneCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-prefix.pch"; sourceTree = "<group>"; };
 		F118BE030E38F6B1545D8B83D783C664 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E033A7E8ECB96DBDE26A6A4A0FB33A /* Pods-SceneCoordinator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SceneCoordinator_Example-umbrella.h"; sourceTree = "<group>"; };
-		FE8A836A21539B980089A3B7 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneCoordinatorType.swift; path = SceneCoordinator/Classes/Core/SceneCoordinatorType.swift; sourceTree = "<group>"; };
-		FE8A836B21539B980089A3B7 /* SceneCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneCoordinator.swift; path = SceneCoordinator/Classes/Core/SceneCoordinator.swift; sourceTree = "<group>"; };
-		FE8A836C21539B980089A3B7 /* SceneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneType.swift; path = SceneCoordinator/Classes/Core/SceneType.swift; sourceTree = "<group>"; };
-		FE8A836D21539B980089A3B7 /* SceneCoordinatorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneCoordinatorError.swift; path = SceneCoordinator/Classes/Core/SceneCoordinatorError.swift; sourceTree = "<group>"; };
-		FE8A837221539B9E0089A3B7 /* UIViewController+SceneCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+SceneCoordinator.swift"; path = "SceneCoordinator/Classes/Extensions/UIViewController+SceneCoordinator.swift"; sourceTree = "<group>"; };
-		FE8A837421539BA40089A3B7 /* SceneModalTransitionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneModalTransitionStyle.swift; path = SceneCoordinator/Classes/Model/SceneModalTransitionStyle.swift; sourceTree = "<group>"; };
-		FE8A837521539BA40089A3B7 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = SceneCoordinator/Classes/Model/Stack.swift; sourceTree = "<group>"; };
-		FE8A837621539BA40089A3B7 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spider.swift; path = SceneCoordinator/Classes/Model/Spider.swift; sourceTree = "<group>"; };
-		FE8A837721539BA50089A3B7 /* SceneModalPresentationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneModalPresentationStyle.swift; path = SceneCoordinator/Classes/Model/SceneModalPresentationStyle.swift; sourceTree = "<group>"; };
+		FF6F4A53512C30E2D41B1CAA32A85B02 /* SceneModalTransitionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneModalTransitionStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,18 +146,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		351B4F00B1743F9CEF2261DE3591F28B /* Support Files */ = {
+		339E6ADC5F957227389396EE6A3C61A7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C66693E879B7F80580ADBBF5D776A98D /* Info.plist */,
-				B65BABB33FDFEE279ADC6BEC991ECFB9 /* SceneCoordinator.modulemap */,
-				E827E4F7BE5D674F362FC43B084590E3 /* SceneCoordinator.xcconfig */,
-				A5AF5CC7C293892101742210244201F2 /* SceneCoordinator-dummy.m */,
-				541540491495C57BD64A5A35E0534D3A /* SceneCoordinator-prefix.pch */,
-				AE3E6C726498E8361AA6CC418D937928 /* SceneCoordinator-umbrella.h */,
+				D7BAB95FA5FCF90575EB0146D5D31A8D /* SceneCoordinator.swift */,
+				3F4EC0E9CA3E704C56CAC83F76DBA782 /* SceneCoordinatorError.swift */,
+				63EAE562B7260A23E9B14C6F16A1665F /* SceneCoordinatorType.swift */,
+				7CB3A905A1ED61A34225934605A7B9CC /* SceneType.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SceneCoordinator";
+			name = Core;
+			path = SceneCoordinator/Classes/Core;
 			sourceTree = "<group>";
 		};
 		3CAD09BC9B1F320FC0EF959EC4478302 /* Targets Support Files */ = {
@@ -169,14 +167,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4CD531FF417D055DB8857D96AF6374A5 /* SceneCoordinator */ = {
+		4793035D362F4C6435E184713ED3D9E4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B5CAEDB833D3242E31FB0D2D80C4351 /* Pod */,
-				351B4F00B1743F9CEF2261DE3591F28B /* Support Files */,
+				02969A598C7A837CB9A63F2A473B47F2 /* Info.plist */,
+				D54612B15069BD4C4CF8D56B61155F76 /* SceneCoordinator.modulemap */,
+				9F646426097F0369EC571CA405CCF3C2 /* SceneCoordinator.xcconfig */,
+				364001D75C2870C621A4EDA5C92AD06B /* SceneCoordinator-dummy.m */,
+				EA8337BD6330D58D4B670C410F413587 /* SceneCoordinator-prefix.pch */,
+				17527959A6FD89455F6104E5FA8815AA /* SceneCoordinator-umbrella.h */,
 			);
-			name = SceneCoordinator;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SceneCoordinator";
+			sourceTree = "<group>";
+		};
+		51D7083BABF393C1A867B5D9C021A063 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B415DC48EF17B3A27DE73705BD5607 /* SceneModalPresentationStyle.swift */,
+				FF6F4A53512C30E2D41B1CAA32A85B02 /* SceneModalTransitionStyle.swift */,
+				015D5787858B20DDD38BA1984830D6C8 /* Spider.swift */,
+				6F0E5A6C0112322192E5A5A50110519E /* Stack.swift */,
+			);
+			name = Model;
+			path = SceneCoordinator/Classes/Model;
+			sourceTree = "<group>";
+		};
+		5B8A98453DADA5A329C32C9BEE89FE36 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D712E4A77AABBDEC6DA788E95C7C /* LICENSE */,
+				367E832EE1876A46A3006BA2C0E63ECB /* README.md */,
+				CCE19A91F06CD85719385F5DA7336B54 /* SceneCoordinator.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -191,30 +215,33 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				D52E3EEE82A3ED775F2964376B99FA6C /* Development Pods */,
+				C2989542E6A195113E2443C73B3455CA /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				293DDB92E74AC98DACDA549705037D09 /* Products */,
 				3CAD09BC9B1F320FC0EF959EC4478302 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B5CAEDB833D3242E31FB0D2D80C4351 /* Pod */ = {
+		80D166551CC02A3F4D91B263E9AAF1AC /* SceneCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				FE8A837721539BA50089A3B7 /* SceneModalPresentationStyle.swift */,
-				FE8A837421539BA40089A3B7 /* SceneModalTransitionStyle.swift */,
-				FE8A837621539BA40089A3B7 /* Spider.swift */,
-				FE8A837521539BA40089A3B7 /* Stack.swift */,
-				FE8A837221539B9E0089A3B7 /* UIViewController+SceneCoordinator.swift */,
-				FE8A836B21539B980089A3B7 /* SceneCoordinator.swift */,
-				FE8A836D21539B980089A3B7 /* SceneCoordinatorError.swift */,
-				FE8A836A21539B980089A3B7 /* SceneCoordinatorType.swift */,
-				FE8A836C21539B980089A3B7 /* SceneType.swift */,
-				A92BA80901EFE9B4FB1CD62A4717D8FE /* LICENSE */,
-				A03203537AC0CA6A5B4C68C542CC44A3 /* README.md */,
-				692580D73CAB3C143E4018D89C8678F6 /* SceneCoordinator.podspec */,
+				339E6ADC5F957227389396EE6A3C61A7 /* Core */,
+				8C6F8C068F0EB135E6A4F153F1CCE659 /* Extensions */,
+				51D7083BABF393C1A867B5D9C021A063 /* Model */,
+				5B8A98453DADA5A329C32C9BEE89FE36 /* Pod */,
+				4793035D362F4C6435E184713ED3D9E4 /* Support Files */,
 			);
-			name = Pod;
+			name = SceneCoordinator;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8C6F8C068F0EB135E6A4F153F1CCE659 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D32405BEE02E9C02061B2ED5A3A062E /* UIViewController+SceneCoordinator.swift */,
+			);
+			name = Extensions;
+			path = SceneCoordinator/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		8EE561A301366050F914FCADEE47BEFE /* Pods-SceneCoordinator_Tests */ = {
@@ -243,10 +270,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D52E3EEE82A3ED775F2964376B99FA6C /* Development Pods */ = {
+		C2989542E6A195113E2443C73B3455CA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4CD531FF417D055DB8857D96AF6374A5 /* SceneCoordinator */,
+				80D166551CC02A3F4D91B263E9AAF1AC /* SceneCoordinator */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -303,7 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D20468D9E380A2FF0CB712D4F10FD8C6 /* Build configuration list for PBXNativeTarget "SceneCoordinator" */;
 			buildPhases = (
-				89270E4DE63C73C9E530EDD52E1F0EBF /* Sources */,
+				71FBA110116EE567CBCF28109F1EF464 /* Sources */,
 				52BBC476C8638BFEB0C37310971FC955 /* Frameworks */,
 				BD0FE0599E1BA55EFCAEBD7F40683391 /* Headers */,
 			);
@@ -342,11 +369,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					053957A907A2A335D2143393B4D4C0E7 = {
-						LastSwiftMigration = 0940;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,24 +402,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8A837821539BA50089A3B7 /* SceneModalTransitionStyle.swift in Sources */,
-				FE8A837321539B9E0089A3B7 /* UIViewController+SceneCoordinator.swift in Sources */,
-				FE8A837121539B980089A3B7 /* SceneCoordinatorError.swift in Sources */,
-				FE8A836F21539B980089A3B7 /* SceneCoordinator.swift in Sources */,
-				FE8A837921539BA50089A3B7 /* Stack.swift in Sources */,
 				D12E0BAD23727B1BB2DBB3852EF66D61 /* Pods-SceneCoordinator_Example-dummy.m in Sources */,
-				FE8A837021539B980089A3B7 /* SceneType.swift in Sources */,
-				FE8A836E21539B980089A3B7 /* SceneCoordinatorType.swift in Sources */,
-				FE8A837B21539BA50089A3B7 /* SceneModalPresentationStyle.swift in Sources */,
-				FE8A837A21539BA50089A3B7 /* Spider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89270E4DE63C73C9E530EDD52E1F0EBF /* Sources */ = {
+		71FBA110116EE567CBCF28109F1EF464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBA32B9C4EB41E833241B9E22803363 /* SceneCoordinator-dummy.m in Sources */,
+				C511D075A577A5C22DC9873F34E251FF /* SceneCoordinator-dummy.m in Sources */,
+				D7D89A861CE02BBC78940217F270F010 /* SceneCoordinator.swift in Sources */,
+				7468F26EFE49535E0E34128AAEE82851 /* SceneCoordinatorError.swift in Sources */,
+				E3B91B789E9F1786C342D90E4C5E7349 /* SceneCoordinatorType.swift in Sources */,
+				9EA1F06C144B0E28651A26F22BF04CC6 /* SceneModalPresentationStyle.swift in Sources */,
+				5598FA51A91F1D416A3DE3D60D76018A /* SceneModalTransitionStyle.swift in Sources */,
+				3E9DE17FC3EDA8730AF4B67990D3C9F4 /* SceneType.swift in Sources */,
+				8BDC7560AE1755ADC0C05D7D1D6AD5C2 /* Spider.swift in Sources */,
+				24D5D416E08568848CB32B3E0EFB8C70 /* Stack.swift in Sources */,
+				8D09E87C7101C82EC1A12C35AE53CEE5 /* UIViewController+SceneCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +441,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		097747F3820B7A6FFCDD0DAB34B97DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F646426097F0369EC571CA405CCF3C2 /* SceneCoordinator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SceneCoordinator/SceneCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SceneCoordinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SceneCoordinator/SceneCoordinator.modulemap";
+				PRODUCT_MODULE_NAME = SceneCoordinator;
+				PRODUCT_NAME = SceneCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3E1631E00330CA6D2443B8160BD69B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 199E6B8C1279EA3785F08026A81AFE4E /* Pods-SceneCoordinator_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -449,7 +503,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -461,7 +514,6 @@
 			baseConfigurationReference = 641264444B0D56DA5AD4A094BCE153B9 /* Pods-SceneCoordinator_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -485,7 +537,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -493,9 +544,9 @@
 			};
 			name = Release;
 		};
-		5D59548B25E5261F49DE61BBD1668444 /* Debug */ = {
+		5CEF9B0AF1760124E053BD249CB9190A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E827E4F7BE5D674F362FC43B084590E3 /* SceneCoordinator.xcconfig */;
+			baseConfigurationReference = 9F646426097F0369EC571CA405CCF3C2 /* SceneCoordinator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -518,7 +569,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -679,39 +730,6 @@
 			};
 			name = Release;
 		};
-		C95B684F6E0436AEB68A7B133982353B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E827E4F7BE5D674F362FC43B084590E3 /* SceneCoordinator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SceneCoordinator/SceneCoordinator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SceneCoordinator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SceneCoordinator/SceneCoordinator.modulemap";
-				PRODUCT_MODULE_NAME = SceneCoordinator;
-				PRODUCT_NAME = SceneCoordinator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		EC54F4EA054F55B26F55356A2BD13645 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E85262536EE24DC36C2AE6B13B4CEDDC /* Pods-SceneCoordinator_Tests.release.xcconfig */;
@@ -779,8 +797,8 @@
 		D20468D9E380A2FF0CB712D4F10FD8C6 /* Build configuration list for PBXNativeTarget "SceneCoordinator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5D59548B25E5261F49DE61BBD1668444 /* Debug */,
-				C95B684F6E0436AEB68A7B133982353B /* Release */,
+				5CEF9B0AF1760124E053BD249CB9190A /* Debug */,
+				097747F3820B7A6FFCDD0DAB34B97DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

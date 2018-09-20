@@ -1,9 +1,9 @@
 {
   "name": "SceneCoordinator",
   "version": "0.1.0",
-  "summary": "A short description of SceneCoordinator.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/linhairui19@gmail.com/SceneCoordinator",
+  "summary": "A convenient and simple way of navigating to and from ViewControllers\n.\"",
+  "description": "A convenient and simple way of navigating to and from ViewControllers. \n  * Router\n  * Coordinator\n  * Scenes",
+  "homepage": "https://github.com/hairui19/SceneCoordinator",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "linhairui19@gmail.com": "hairui@sorealprop.com"
   },
   "source": {
-    "git": "https://github.com/linhairui19@gmail.com/SceneCoordinator.git",
+    "git": "https://github.com/hairui19/SceneCoordinator.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "swift_version": "4.2",
   "source_files": "SceneCoordinator/Classes/**/*"
 }
