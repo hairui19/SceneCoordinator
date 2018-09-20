@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		20CD77ED0137D0545130735CBEAE5216 /* Pods-SceneCoordinator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2E033A7E8ECB96DBDE26A6A4A0FB33A /* Pods-SceneCoordinator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46FA966BA874D456E9525642580681D2 /* Pods-SceneCoordinator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C900CE713C81D6237B560F7954F795 /* Pods-SceneCoordinator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5825D4A24D1AE6B3370B59CFB0041AD7 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE4F8B6F42EFCED04B6B7143F9D4E /* ReplaceMe.swift */; };
 		59D2B061C789E72F70AABA769DE0E660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		7355A1632B77B02769208F2B1C6D4D67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D12E0BAD23727B1BB2DBB3852EF66D61 /* Pods-SceneCoordinator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7592D834005C9D7A7C46ED493191AF /* Pods-SceneCoordinator_Example-dummy.m */; };
@@ -39,7 +38,7 @@
 /* Begin PBXFileReference section */
 		044418225838ED265B2872339C876911 /* Pods-SceneCoordinator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SceneCoordinator_Tests-dummy.m"; sourceTree = "<group>"; };
 		05C5B678BF7F2A5762450641CF97703B /* Pods-SceneCoordinator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SceneCoordinator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		14A6CBD6D9E112FE6FC19A342CF8004A /* Pods_SceneCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SceneCoordinator_Example.framework; path = "Pods-SceneCoordinator_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A6CBD6D9E112FE6FC19A342CF8004A /* Pods_SceneCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneCoordinator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A46E956D3E9835B40BA2A49F2254D /* Pods-SceneCoordinator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SceneCoordinator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		183C14F96FCB238A2CB9BB2596C3FD12 /* Pods-SceneCoordinator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		199E6B8C1279EA3785F08026A81AFE4E /* Pods-SceneCoordinator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,22 +50,21 @@
 		541540491495C57BD64A5A35E0534D3A /* SceneCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-prefix.pch"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		641264444B0D56DA5AD4A094BCE153B9 /* Pods-SceneCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
-		692580D73CAB3C143E4018D89C8678F6 /* SceneCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SceneCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		692580D73CAB3C143E4018D89C8678F6 /* SceneCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SceneCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73F6047476B78EDC0E0AD1E505691900 /* Pods-SceneCoordinator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SceneCoordinator_Example.modulemap"; sourceTree = "<group>"; };
 		82C900CE713C81D6237B560F7954F795 /* Pods-SceneCoordinator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SceneCoordinator_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8B59DE8BC6A28FE8CCA33A0C3A70FA31 /* Pods-SceneCoordinator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		909E03D1FE9B65281A51ACF8DC077625 /* Pods_SceneCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SceneCoordinator_Tests.framework; path = "Pods-SceneCoordinator_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98E2E463308BE5D96180ADBA4B08664C /* SceneCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SceneCoordinator.framework; path = SceneCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909E03D1FE9B65281A51ACF8DC077625 /* Pods_SceneCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneCoordinator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98E2E463308BE5D96180ADBA4B08664C /* SceneCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SceneCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C485A5ACEEAC440FF9696F034627CCD /* Pods-SceneCoordinator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SceneCoordinator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A03203537AC0CA6A5B4C68C542CC44A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A03203537AC0CA6A5B4C68C542CC44A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5AF5CC7C293892101742210244201F2 /* SceneCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SceneCoordinator-dummy.m"; sourceTree = "<group>"; };
-		A92BA80901EFE9B4FB1CD62A4717D8FE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A92BA80901EFE9B4FB1CD62A4717D8FE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AE3E6C726498E8361AA6CC418D937928 /* SceneCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-umbrella.h"; sourceTree = "<group>"; };
 		B65BABB33FDFEE279ADC6BEC991ECFB9 /* SceneCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SceneCoordinator.modulemap; sourceTree = "<group>"; };
 		C66693E879B7F80580ADBBF5D776A98D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A732A04777E246C9F54F677E9EA56C /* Pods-SceneCoordinator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SceneCoordinator_Example-resources.sh"; sourceTree = "<group>"; };
-		DA7BE4F8B6F42EFCED04B6B7143F9D4E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SceneCoordinator/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		E2DC4B987E047C0A7702C5708F801428 /* Pods-SceneCoordinator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SceneCoordinator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E827E4F7BE5D674F362FC43B084590E3 /* SceneCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SceneCoordinator.xcconfig; sourceTree = "<group>"; };
 		E85262536EE24DC36C2AE6B13B4CEDDC /* Pods-SceneCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SceneCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		4CD531FF417D055DB8857D96AF6374A5 /* SceneCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				DA7BE4F8B6F42EFCED04B6B7143F9D4E /* ReplaceMe.swift */,
 				8B5CAEDB833D3242E31FB0D2D80C4351 /* Pod */,
 				351B4F00B1743F9CEF2261DE3591F28B /* Support Files */,
 			);
@@ -359,7 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5825D4A24D1AE6B3370B59CFB0041AD7 /* ReplaceMe.swift in Sources */,
 				DEBA32B9C4EB41E833241B9E22803363 /* SceneCoordinator-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
