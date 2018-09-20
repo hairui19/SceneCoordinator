@@ -28,11 +28,11 @@ A convenient and simple way of navigating to and from ViewControllers.
   s.homepage         = 'https://github.com/hairui19/SceneCoordinator'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'linhairui19@gmail.com' => 'hairui@sorealprop.com' }
+  s.author           = { 'linhairui19@' => 'linhairui19@gmail.com' }
   s.source           = { :git => 'https://github.com/hairui19/SceneCoordinator.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version = "4.2"
   s.source_files = 'SceneCoordinator/Classes/**/*'
   
