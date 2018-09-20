@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SceneCoordinator_Example' do
+  pod 'SceneCoordinator', :path => '../'
+
+  target 'SceneCoordinator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
