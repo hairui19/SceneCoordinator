@@ -75,6 +75,7 @@ extension Main : SceneType{
 - `selectTab` function for `Tab`
 
 **_Note2: The framework gets the UIViewControllers from storyboard via their IDs, so please name every UIViewController's storyboardID the same as the class name_**
+
 <img width="256" alt="screen shot 2018-09-21 at 4 21 20 pm" src="https://user-images.githubusercontent.com/24172260/45869353-d6cb1400-bdba-11e8-9977-2e4f58cf3392.png">
 
 
