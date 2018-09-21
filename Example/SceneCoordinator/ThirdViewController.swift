@@ -45,12 +45,12 @@ extension ThirdViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch data[indexPath.row] {
         case "Pop":
-//            SceneCoordinator<Main>.popToPrevious()
+            SceneCoordinator<Main>.popToPrevious()
             break
         case "Push":
             SceneCoordinator<Main>.push(to: .fourthViewController, withData: ["data" : "FromThirdViewController"], animated: true)
         case "PopToFirst":
-//            SceneCoordinator<Main>.pop(to: .firstViewController, withData: ["data" : "FromThirdViewController"], animated: true)
+            SceneCoordinator<Main>.pop(to: .firstViewController, withData: ["data" : "FromThirdViewController"], animated: true)
             break
         default:
             break
