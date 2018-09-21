@@ -42,7 +42,18 @@ extension Main : SceneType{
     }
     
     var viewControllerType : UIViewController.Type{
-        return FirstViewController.self
+        switch self{
+        case .mainViewController:
+            return MainViewController.self
+        case .firstViewController:
+            return FirstViewController.self
+        case .secondViewController:
+            return SecondViewController.self
+        case .thirdViewController:
+            return ThirdViewController.self
+        case .fourthViewController:
+            return FourthViewController.self
+        }
     }
     
     
