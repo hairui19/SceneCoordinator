@@ -174,6 +174,7 @@ extension SceneCoordinator{
         return present(scene: scene, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
     }
     
+    @discardableResult
     public static func present(
         scene : T,
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
@@ -182,7 +183,16 @@ extension SceneCoordinator{
         )->UIViewController{
         return present(scene: scene, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
+    @discardableResult
+    public static func present(
+        scene : T,
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, with: nil, transitionDelegate: transition, animated: animated)
+    }
     
+    @discardableResult
     public static func present(
         scene : T,
         withData data : [String : Any],
@@ -191,6 +201,16 @@ extension SceneCoordinator{
         animated : Bool
         )->UIViewController{
         return present(scene: scene, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+    @discardableResult
+    public static func present(
+        scene : T,
+        withData data : [String : Any],
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, with: data, transitionDelegate: transition, animated: animated)
     }
     
     private static func present(
@@ -204,6 +224,21 @@ extension SceneCoordinator{
         presentedViewController.modalTransitionStyle = transitionStyle.value
         presentedViewController.modalPresentationStyle = presentationStyle.value
         
+        topViewController.present(presentedViewController, animated: animated) {
+            Spider.shared.addNewInterface(presentedViewController)
+        }
+        return presentedViewController
+    }
+    
+    private static func present(
+        scene : T,
+        with data : [String : Any]?,
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool
+        )->UIViewController{
+        let presentedViewController = create(viewControllerWith: scene, with: data)
+        presentedViewController.modalPresentationStyle = .custom
+        presentedViewController.transitioningDelegate = transition
         topViewController.present(presentedViewController, animated: animated) {
             Spider.shared.addNewInterface(presentedViewController)
         }
