@@ -41,11 +41,14 @@ extension FourthViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch data[indexPath.row] {
         case "Pop":
-            SceneCoordinator<Main>.popToPrevious()
+            break
+//            SceneCoordinator<Main>.popToPrevious()
         case "PopToFirst":
-            SceneCoordinator<Main>.pop(to: .firstViewController, withData: ["data":"FromFourthViewController"], animated: true)
+            break
+//            SceneCoordinator<Main>.pop(to: .firstViewController, withData: ["data":"FromFourthViewController"], animated: true)
         case "PopToSecond":
-            SceneCoordinator<Main>.pop(to: .secondViewController, withData: ["data":"FromFourthViewController"], animated: true)
+            break
+//            SceneCoordinator<Main>.pop(to: .secondViewController, withData: ["data":"FromFourthViewController"], animated: true)
             
         default:
             break
