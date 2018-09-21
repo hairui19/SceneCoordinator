@@ -23,7 +23,7 @@ class PresentSingleViewExampleViewController : UIViewController{
     @IBAction func present(_ sender: UIButton) {
         
         if let text = textField.text, text != ""{
-            SceneCoordinator<PresentSingleView>.present(scene: .presentSingleFirstViewController, withData: ["data" : text], transitionDelegate: transitionDelegate, animated: true)
+            SceneCoordinator<PresentSingleView>.presentView(scene: .presentSingleFirstViewController, withData: ["data" : text], transitionDelegate: transitionDelegate, animated: true)
 //            SceneCoordinator<PresentSingleView>.present(scene: .presentSingleFirstViewController, withData: ["data" : text], animated: true)
         }
         

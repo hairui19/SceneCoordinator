@@ -252,13 +252,9 @@ extension SceneCoordinator{
     private static func createNav<U: UINavigationController>(
         with scene : [T],
         in navBarType : U.Type,
-        with data: [String : Any]?,
-        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-        withPresentationStyle presentationStyle: SceneModalPresentationStyle
+        with data: [String : Any]?
         )->U{
         let navBarController = navBarType.init()
-        navBarController.modalTransitionStyle = transitionStyle.value
-        navBarController.modalPresentationStyle = presentationStyle.value
         navBarController.viewControllers = scene.map { (scene) -> UIViewController in
             return create(viewControllerWith: scene, with: nil)
         }
@@ -276,7 +272,25 @@ extension SceneCoordinator{
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool
         )->E{
-        let navBarController = createNav(with: scene, in: navBarType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle)
+        let navBarController = createNav(with: scene, in: navBarType, with: data)
+        navBarController.modalTransitionStyle = transitionStyle.value
+        navBarController.modalPresentationStyle = presentationStyle.value
+        topViewController.present(navBarController, animated: animated) {
+            Spider.shared.addNewInterface(navBarController)
+        }
+        return navBarController
+    }
+    
+    private static func presentNav<E: UINavigationController>(
+        with scene : [T],
+        in navBarType : E.Type,
+        with data: [String : Any]?,
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool
+        )->E{
+        let navBarController = createNav(with: scene, in: navBarType, with: data)
+        navBarController.modalPresentationStyle = .custom
+        navBarController.transitioningDelegate = transition
         topViewController.present(navBarController, animated: animated) {
             Spider.shared.addNewInterface(navBarController)
         }
@@ -300,7 +314,6 @@ extension SceneCoordinator{
         return presentNav(with: scene, in: UINavigationController.self, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     
-
     
     /// Present viewControllers in default UINavigationController
     /// Data is passed to the ViewController that is on the screen
@@ -324,6 +337,7 @@ extension SceneCoordinator{
         return presentNav(with: scene, in: UINavigationController.self, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     
+    
     /// Present viewControllers in defined NavigationControllerType
     @discardableResult
     public static func presentNav(
@@ -342,6 +356,8 @@ extension SceneCoordinator{
         animated : Bool)->UINavigationController{
         return presentNav(with: scene, in: navigationControllerType, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
+    
+    
     
     /// Present viewControllers in defined NavigationControllerType
     /// Data is passed to the ViewController that is on the screen
@@ -363,6 +379,45 @@ extension SceneCoordinator{
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool)->UINavigationController{
         return presentNav(with: scene, in: navigationControllerType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: true)
+    }
+    
+    // ----------- function with transition parameter
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        withData data : [String : Any],
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool
+        )->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: data, transitionDelegate: transition, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType.self, with: nil, transitionDelegate: transition, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        withData data : [String : Any],
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType.self, with: nil, transitionDelegate: transition, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        transitionDelegate transition : UIViewControllerTransitioningDelegate,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: nil, transitionDelegate: transition, animated: animated)
     }
     
 }
