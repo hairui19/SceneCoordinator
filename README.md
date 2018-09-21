@@ -14,6 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * Xcode 9.0 and later
 * Swift 4.0
 
+
 ## Installation
 
 SceneCoordinator is available through [CocoaPods](https://cocoapods.org). To install
@@ -23,33 +24,81 @@ it, simply add the following line to your Podfile:
 pod 'SceneCoordinator'
 ```
 
+
 ## Usage
+### Description
+The purpose of SceneCoordinator is to simplify navigation among UIViewControllers in iOS, so that:
+* UIViewControllers are isolated from each other
+* UIViewControllerDelegates are no longer needed. 
+* Navigation codes are reduced as much as down to a single line. 
+
+Examples:
 ```swift
-    SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
+// Push Operation with data 
+SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
+
+// Presen Operation 
+SceneCoordinator<PresentNav>.presentNav(with: .navFirstChildViewController, animated: true)
+
+// Pop Operation
+SceneCoordinator<Main>.popToPrevious(animated: true)
+
+// Dimiss operation 
+SceneCoordinator<Nav>.dismiss(animated: true)
+
+// TabSelection Operation
+SceneCoordinator<Tab>.select(1)
 ```
 
-### Coordinating between views
+### Set Up
+Setup, ideally an enum, and conform it to `SceneType`
 ```swift
+enum Main{
+    case first
+}
 
+extension Main : SceneType{
+    var storyboard: String {
+    }
+
+    var viewControllerType: UIViewController.Type {
+    }
+
+    var storyboardBundle: Bundle? {
+    }
+}
 ```
 
-### Coordinating between views
+Note: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform 
+- `dismiss` function for `Nav`
+- `selectTab` function for `Tab`
 
-All gestures are available via special variables that you can call on any `UIView` instance. Examples:
+### Passing data to present/pushed viewController 
+Push and present both have overload functions that accept a data parameter which is in `[String : Any]` format. 
 
+Override `willMoveToInterface` in ViewController to retrieve data from `push`, `present` and `Tab.select` operations.
 ```swift
+override func willMoveToInterface(with data: [String : Any]) {
+// `From:` is a framework defined key
+// Read the value to know which viewController initiated the navigation
+    if let fromViewController = data["From:"]{
 
+    }
+    if let data = data["data"] as? String{
+        labelContent = data
+    }
+}
 ```
 
-Full list of available gestures:
+Override `willRevealOnInterface` to retrive data from `pop` and `Nav.dismiss` data
 
-- `onTap`
-- `onLongPress`
-- `onPan`
-- `onPinch`
-- `onRotation`
-- `onSwipe`
-- `onScreenEdgePan`
+```swift
+override func willRevealOnInterface(with data: [String : Any]) {
+    if let data = data["data"] as? String{
+        label.text = data
+        }
+}
+```
 
 
 ## Author
