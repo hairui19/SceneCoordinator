@@ -70,9 +70,9 @@ extension Main : SceneType{
     }
 }
 ```
-**_Note1: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform _**
+**_Note1: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform_**
 
-**_Note2: The framework gets the UIViewControllers from storyboard via their IDs, so please name every UIViewController's storyboardID the same as the class name _**
+**_Note2: The framework gets the UIViewControllers from storyboard via their IDs, so please name every UIViewController's storyboardID the same as the class name_**
 
 
 - `dismiss` function for `Nav`
