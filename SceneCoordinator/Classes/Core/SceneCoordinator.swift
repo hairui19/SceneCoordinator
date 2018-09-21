@@ -11,7 +11,7 @@ import UIKit
 public class SceneCoordinator<T : SceneType>{
     public typealias sceneType = T
     
-    public static var actionSceneKey : String{
+    private static var actionSceneKey : String{
         return "From:"
     }
     
