@@ -211,124 +211,126 @@ extension SceneCoordinator{
     }
 }
 //
-//// MARK: - Presentation: NavBar
-//extension SceneCoordinator{
-//    // Core Function for Container Presentation
-//    private static func present<U : UIViewController>(
-//        scene : [T],
-//        in containerType : U.Type,
-//        selectedIndex : Int,
-//        with data : [String : Any]?,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool)->U{
-//        
-//        let containerController = containerType.init()
-//        containerController.modalTransitionStyle = transitionStyle.value
-//        containerController.modalPresentationStyle = presentationStyle.value
-//        
-//        let childViewControllers = scene.map { (scene) -> UIViewController in
-//            return instantiateViewController(with: scene)
-//        }
-//        
-//        if let navBarController = containerController as? UINavigationController{
-//            navBarController.viewControllers = childViewControllers
-//            initialize(data: data, for: childViewControllers.last!)
-//        }else if let tabBarController = containerController as? UITabBarController{
-//            tabBarController.viewControllers = childViewControllers
-//            tabBarController.selectedIndex = selectedIndex
-//            initialize(data: data, for: childViewControllers[selectedIndex])
-//        }
-//        
-//        topViewController.present(containerController, animated: animated) {
-//            Spider.shared.addNewInterface(containerController)
-//        }
-//        return containerController
-//    }
-//    
-//    /// Present viewControllers in default UINavigationController
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: UINavigationController.self, selectedIndex: 0, with: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: UINavigationController.self, selectedIndex: 0, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//
-//    
-//    /// Present viewControllers in default UINavigationController
-//    /// Data is passed to the ViewController that is on the screen
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        withData data : [String : Any],
-//        animated : Bool
-//        )->UINavigationController{
-//        return present(scene: scene, in: UINavigationController.self, selectedIndex: 0, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        withData data : [String : Any],
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool
-//        )->UINavigationController{
-//        return present(scene: scene, in: UINavigationController.self, selectedIndex: 0, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//    /// Present viewControllers in defined NavigationControllerType
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        in containerType : UINavigationController.Type,
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: containerType.self, selectedIndex: 0, with: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        in containerType : UINavigationController.Type,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: containerType.self, selectedIndex: 0, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//    /// Present viewControllers in defined NavigationControllerType
-//    /// Data is passed to the ViewController that is on the screen
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        in containerType : UINavigationController.Type,
-//        withData data : [String : Any],
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: containerType.self, selectedIndex: 0, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func presentNavBar(
-//        with scene : T...,
-//        in containerType : UINavigationController.Type,
-//        withData data : [String : Any],
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool)->UINavigationController{
-//        return present(scene: scene, in: containerType.self, selectedIndex: 0, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//}
+// MARK: - Presentation: NavBar
+extension SceneCoordinator{
+    // Core Function for Container Presentation
+    private static func createNav<U: UINavigationController>(
+        with scene : [T],
+        in navBarType : U.Type,
+        with data: [String : Any]?,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle
+        )->U{
+        let navBarController = navBarType.init()
+        navBarController.modalTransitionStyle = transitionStyle.value
+        navBarController.modalPresentationStyle = presentationStyle.value
+        navBarController.viewControllers = scene.map { (scene) -> UIViewController in
+            return create(viewControllerWith: scene, with: nil)
+        }
+        if let data = data{
+            navBarController.childViewControllers.last?.willMoveToInterface(with: data)
+        }
+        return navBarController
+    }
+    
+    private static func presentNav<E: UINavigationController>(
+        with scene : [T],
+        in navBarType : E.Type,
+        with data: [String : Any]?,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool
+        )->E{
+        let navBarController = createNav(with: scene, in: navBarType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle)
+        topViewController.present(navBarController, animated: animated) {
+            Spider.shared.addNewInterface(navBarController)
+        }
+        return navBarController
+    }
+    
+    /// Present viewControllers in default UINavigationController
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+
+    
+    /// Present viewControllers in default UINavigationController
+    /// Data is passed to the ViewController that is on the screen
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        withData data : [String : Any],
+        animated : Bool
+        )->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        withData data : [String : Any],
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool
+        )->UINavigationController{
+        return presentNav(with: scene, in: UINavigationController.self, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+    /// Present viewControllers in defined NavigationControllerType
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType, with: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+    /// Present viewControllers in defined NavigationControllerType
+    /// Data is passed to the ViewController that is on the screen
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        withData data : [String : Any],
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    @discardableResult
+    public static func presentNav(
+        with scene : T...,
+        in navigationControllerType : UINavigationController.Type,
+        withData data : [String : Any],
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool)->UINavigationController{
+        return presentNav(with: scene, in: navigationControllerType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: true)
+    }
+    
+}
 //
 //// MARK: - Presentation: TabBar
 //extension SceneCoordinator{
