@@ -51,7 +51,7 @@ extension SceneCoordinator : SceneCoordinatorType{
         }
         return viewController
     }
-
+    
 }
 
 // MARK: - Pusu Functions
@@ -73,7 +73,7 @@ extension SceneCoordinator{
     }
 }
 
-//// MARK: - Pop Functions
+// MARK: - Pop Functions
 extension SceneCoordinator{
     // ---- Pop Functions
     @discardableResult
@@ -153,63 +153,63 @@ extension SceneCoordinator{
     }
 }
 //
-//// MARK: - Presentation: Single ViewController
-//extension SceneCoordinator{
-//    // ----- present a normal UIViewController
-//    
-//    @discardableResult
-//    public static func present(
-//        scene : T,
-//        animated : Bool
-//        )->UIViewController{
-//        return present(scene: scene, withData: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func present(
-//        scene : T,
-//        withData data : Any,
-//        animated : Bool
-//        )->UIViewController{
-//        return present(scene: scene, withData: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
-//    }
-//    
-//    public static func present(
-//        scene : T,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool
-//        )->UIViewController{
-//        return present(scene: scene, withData: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//    public static func present(
-//        scene : T,
-//        withData data : Any,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool
-//        )->UIViewController{
-//        return present(scene: scene, withData: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
-//    }
-//    
-//    private static func present(
-//        scene : T,
-//        withData data : [String : Any]?,
-//        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
-//        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
-//        animated : Bool
-//        )->UIViewController{
-//        let presentedViewController = instantiateViewController(with: scene)
-//        presentedViewController.modalTransitionStyle = transitionStyle.value
-//        presentedViewController.modalPresentationStyle = presentationStyle.value
-//        
-//        topViewController.present(presentedViewController, animated: animated) {
-//            Spider.shared.addNewInterface(presentedViewController)
-//        }
-//        return presentedViewController
-//    }
-//}
+// MARK: - Presentation: Single ViewController
+extension SceneCoordinator{
+    // ----- present a normal UIViewController
+    
+    @discardableResult
+    public static func present(
+        scene : T,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, withData: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    @discardableResult
+    public static func present(
+        scene : T,
+        withData data : Any,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, withData: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+    }
+    
+    public static func present(
+        scene : T,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, withData: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+    public static func present(
+        scene : T,
+        withData data : Any,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool
+        )->UIViewController{
+        return present(scene: scene, withData: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+    }
+    
+    private static func present(
+        scene : T,
+        withData data : [String : Any]?,
+        withTransitionStyle transitionStyle: SceneModalTransitionStyle,
+        withPresentationStyle presentationStyle: SceneModalPresentationStyle,
+        animated : Bool
+        )->UIViewController{
+        let presentedViewController = create(viewControllerWith: scene, with: data)
+        presentedViewController.modalTransitionStyle = transitionStyle.value
+        presentedViewController.modalPresentationStyle = presentationStyle.value
+        
+        topViewController.present(presentedViewController, animated: animated) {
+            Spider.shared.addNewInterface(presentedViewController)
+        }
+        return presentedViewController
+    }
+}
 //
 //// MARK: - Presentation: NavBar
 //extension SceneCoordinator{
