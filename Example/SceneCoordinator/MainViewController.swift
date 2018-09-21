@@ -62,7 +62,7 @@ extension MainViewController : UITableViewDelegate{
         case 1:
             SceneCoordinator<PresentSingleView>.push(to: .presentSingleViewExampleViewController, animated: true)
         case 2:
-            break
+            SceneCoordinator<PresentNav>.push(to: .presentNavExampleViewController, animated: true)
         case 3:
             break
         default:

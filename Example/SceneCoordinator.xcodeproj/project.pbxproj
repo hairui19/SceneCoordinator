@@ -27,6 +27,11 @@
 		FE8A839B21548E4A0089A3B7 /* PresentSingleFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */; };
 		FE8A839D21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */; };
 		FE8A839F21548F580089A3B7 /* PresentSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839E21548F580089A3B7 /* PresentSingleView.swift */; };
+		FE8A83A221549ED20089A3B7 /* PresentNavExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A121549ED20089A3B7 /* PresentNavExampleViewController.swift */; };
+		FE8A83A421549F520089A3B7 /* PresentNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8A83A321549F520089A3B7 /* PresentNav.storyboard */; };
+		FE8A83A621549F820089A3B7 /* NavFirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A521549F820089A3B7 /* NavFirstChildViewController.swift */; };
+		FE8A83A821549FC30089A3B7 /* NavSecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A721549FC30089A3B7 /* NavSecondChildViewController.swift */; };
+		FE8A83AA2154A01E0089A3B7 /* PresentNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A92154A01E0089A3B7 /* PresentNav.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleFirstViewController.swift; sourceTree = "<group>"; };
 		FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleViewExampleViewController.swift; sourceTree = "<group>"; };
 		FE8A839E21548F580089A3B7 /* PresentSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleView.swift; sourceTree = "<group>"; };
+		FE8A83A121549ED20089A3B7 /* PresentNavExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNavExampleViewController.swift; sourceTree = "<group>"; };
+		FE8A83A321549F520089A3B7 /* PresentNav.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentNav.storyboard; sourceTree = "<group>"; };
+		FE8A83A521549F820089A3B7 /* NavFirstChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavFirstChildViewController.swift; sourceTree = "<group>"; };
+		FE8A83A721549FC30089A3B7 /* NavSecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavSecondChildViewController.swift; sourceTree = "<group>"; };
+		FE8A83A92154A01E0089A3B7 /* PresentNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNav.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,7 @@
 			children = (
 				FE8A838B21539CAB0089A3B7 /* Main.swift */,
 				FE8A839E21548F580089A3B7 /* PresentSingleView.swift */,
+				FE8A83A92154A01E0089A3B7 /* PresentNav.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 			children = (
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				FE8A839821548E190089A3B7 /* PresentSingleView.storyboard */,
+				FE8A83A321549F520089A3B7 /* PresentNav.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -247,6 +259,9 @@
 		FE8A83A0215499A10089A3B7 /* PresentNavBar */ = {
 			isa = PBXGroup;
 			children = (
+				FE8A83A121549ED20089A3B7 /* PresentNavExampleViewController.swift */,
+				FE8A83A521549F820089A3B7 /* NavFirstChildViewController.swift */,
+				FE8A83A721549FC30089A3B7 /* NavSecondChildViewController.swift */,
 			);
 			name = PresentNavBar;
 			sourceTree = "<group>";
@@ -341,6 +356,7 @@
 				FE8A839921548E190089A3B7 /* PresentSingleView.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				FE8A83A421549F520089A3B7 /* PresentNav.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,14 +436,18 @@
 				FE8A838C21539CAC0089A3B7 /* Main.swift in Sources */,
 				FE8A838921539C830089A3B7 /* FirstViewController.swift in Sources */,
 				FE8A838621539C830089A3B7 /* SecondViewController.swift in Sources */,
+				FE8A83A821549FC30089A3B7 /* NavSecondChildViewController.swift in Sources */,
+				FE8A83A221549ED20089A3B7 /* PresentNavExampleViewController.swift in Sources */,
 				FE8A838321539C830089A3B7 /* MainViewController.swift in Sources */,
 				FE8A838521539C830089A3B7 /* PushAndPopBaseViewController.swift in Sources */,
 				FE8A838721539C830089A3B7 /* FourthViewController.swift in Sources */,
+				FE8A83A621549F820089A3B7 /* NavFirstChildViewController.swift in Sources */,
 				FE8A839D21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift in Sources */,
 				FE8A839F21548F580089A3B7 /* PresentSingleView.swift in Sources */,
 				FE8A838421539C830089A3B7 /* PushAndPopExampleViewController.swift in Sources */,
 				FE8A838821539C830089A3B7 /* ThirdViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				FE8A83AA2154A01E0089A3B7 /* PresentNav.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
