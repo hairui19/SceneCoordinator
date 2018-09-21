@@ -25,7 +25,6 @@
 		ED1E6D3D233AC2CBBE1FBE50E30B2659 /* Pods-SceneCoordinator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 044418225838ED265B2872339C876911 /* Pods-SceneCoordinator_Tests-dummy.m */; };
 		F1CABD6DC6501291E06FF39D7C9915B3 /* SceneCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17527959A6FD89455F6104E5FA8815AA /* SceneCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3234CA572015D3E9170208D0827E798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		FE8A8394215484700089A3B7 /* SceneCoordinator+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A8393215484700089A3B7 /* SceneCoordinator+Push.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +87,6 @@
 		EA8337BD6330D58D4B670C410F413587 /* SceneCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SceneCoordinator-prefix.pch"; sourceTree = "<group>"; };
 		F118BE030E38F6B1545D8B83D783C664 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E033A7E8ECB96DBDE26A6A4A0FB33A /* Pods-SceneCoordinator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SceneCoordinator_Example-umbrella.h"; sourceTree = "<group>"; };
-		FE8A8393215484700089A3B7 /* SceneCoordinator+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneCoordinator+Push.swift"; sourceTree = "<group>"; };
 		FF6F4A53512C30E2D41B1CAA32A85B02 /* SceneModalTransitionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneModalTransitionStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				D7BAB95FA5FCF90575EB0146D5D31A8D /* SceneCoordinator.swift */,
-				FE8A8393215484700089A3B7 /* SceneCoordinator+Push.swift */,
 				3F4EC0E9CA3E704C56CAC83F76DBA782 /* SceneCoordinatorError.swift */,
 				63EAE562B7260A23E9B14C6F16A1665F /* SceneCoordinatorType.swift */,
 				7CB3A905A1ED61A34225934605A7B9CC /* SceneType.swift */,
@@ -411,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12E0BAD23727B1BB2DBB3852EF66D61 /* Pods-SceneCoordinator_Example-dummy.m in Sources */,
-				FE8A8394215484700089A3B7 /* SceneCoordinator+Push.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
