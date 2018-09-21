@@ -15,8 +15,9 @@ public protocol SceneType{
     /// - Eg, "Main.storyboard" -> "Main"
     var storyboard : String {get}
     
-    /// StoryboardID of the viewController in Storyboard.
-    var storyboardID : String {get}
+    /// ViewController Type
+    /// Eg. MainViewController.self
+    var viewControllerType : UIViewController.Type { get }
     
     /// Bundle which contains the storyboard files and its related resources
     var storyboardBundle : Bundle? {get}
