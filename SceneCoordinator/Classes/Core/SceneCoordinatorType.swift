@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol SceneCoordinatorType{
+protocol SceneCoordinatorType{
     associatedtype sceneType : SceneType
     
 //    @discardableResult
