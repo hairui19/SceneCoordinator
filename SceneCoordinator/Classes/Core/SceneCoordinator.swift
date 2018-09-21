@@ -35,10 +35,10 @@ extension SceneCoordinator : SceneCoordinatorType{
         }
     }
     
-    fileprivate static func callBack(data : [String : Any]?, for viewController : UIViewController){
+    fileprivate static func callBack(data : [String : Any]?, to revealingViewController : UIViewController, from outgoingViewController : UIViewController){
         if var data = data{
-            data[actionSceneKey] = String(describing: type(of: viewController.self))
-            viewController.willRevealOnInterface(with: data)
+            data[actionSceneKey] = String(describing: type(of: outgoingViewController.self))
+            revealingViewController.willRevealOnInterface(with: data)
         }
     }
     
@@ -74,84 +74,84 @@ extension SceneCoordinator{
 }
 
 //// MARK: - Pop Functions
-//extension SceneCoordinator{
-//    // ---- Pop Functions
-//    @discardableResult
-//    public static func pop(to scene : T, animated : Bool)->[UIViewController]?{
-//        return pop(to: scene, with: nil, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func pop(to scene : T, withData data: [String : Any], animated : Bool)->[UIViewController]?{
-//        return pop(to: scene, with: data, animated: animated)
-//    }
-//    
-//    private static func pop(to scene : T, with data: [String : Any]? = nil, animated : Bool)->[UIViewController]?{
-//        guard let navBarController = topViewController.navigationController else{
-//            SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
-//            return nil
-//        }
-//        
-//        var endVC : UIViewController!
-//        for viewController in navBarController.childViewControllers.reversed(){
-//            if String(describing: type(of: viewController.self)) == scene.storyboardID{
-//                endVC = viewController
-//                break
-//            }
-//        }
-//        if endVC == nil {
-//            SceneCoordinatorError.cantFindTheViewControllerInNavigationControllerStack.execute()
-//        }
-//        callBack(data: data, for: endVC)
-//        return topViewController.navigationController?.popToViewController(endVC, animated: animated)
-//    }
-//    
-//    // ---- PopToPrevious Functions
-//    @discardableResult
-//    public static func popToPrevious(animated : Bool = true)->UIViewController?{
-//        return popToPrevious(with: nil, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func popToPrevious(withData data : [String : Any], animated : Bool)->UIViewController?{
-//        return popToPrevious(with: data, animated: animated)
-//    }
-//    
-//    private static func popToPrevious(with data: [String : Any]? = nil, animated : Bool)->UIViewController?{
-//        if let data = data{
-//            guard let navBarController = topViewController.navigationController else{
-//                SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
-//                return nil 
-//            }
-//            let secondTopMostViewController = navBarController.childViewControllers[navBarController.childViewControllers.count - 2]
-//            callBack(data: data, for: secondTopMostViewController)
-//        }
-//        return topViewController.navigationController?.popViewController(animated: animated)
-//    }
-//    
-//    // ------ PopToRoot Functions
-//    @discardableResult
-//    public static func popToRoot(animated : Bool)->[UIViewController]?{
-//        return popToRoot(with: nil, animated: animated)
-//    }
-//    
-//    @discardableResult
-//    public static func popToRoot(withData data : [String : Any], animated: Bool)->[UIViewController]?{
-//        return popToRoot(with: data, animated: animated)
-//    }
-//    
-//    private static func popToRoot(with data : [String : Any]? = nil, animated : Bool)->[UIViewController]?{
-//        if let data = data{
-//            guard let navBarController = topViewController.navigationController else{
-//                SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
-//                return nil
-//            }
-//            let endVC = navBarController.childViewControllers[0]
-//            callBack(data: data, for: endVC)
-//        }
-//        return topViewController.navigationController?.popToRootViewController(animated: animated)
-//    }
-//}
+extension SceneCoordinator{
+    // ---- Pop Functions
+    @discardableResult
+    public static func pop(to scene : T, animated : Bool)->[UIViewController]?{
+        return pop(to: scene, with: nil, animated: animated)
+    }
+    
+    @discardableResult
+    public static func pop(to scene : T, withData data: [String : Any], animated : Bool)->[UIViewController]?{
+        return pop(to: scene, with: data, animated: animated)
+    }
+    
+    private static func pop(to scene : T, with data: [String : Any]? = nil, animated : Bool)->[UIViewController]?{
+        guard let navBarController = topViewController.navigationController else{
+            SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
+            return nil
+        }
+        
+        var endVC : UIViewController!
+        for viewController in navBarController.childViewControllers.reversed(){
+            if String(describing: type(of: viewController.self)) == String(describing: scene.viewControllerType){
+                endVC = viewController
+                break
+            }
+        }
+        if endVC == nil {
+            SceneCoordinatorError.cantFindTheViewControllerInNavigationControllerStack.execute()
+        }
+        callBack(data: data, to: endVC, from: topViewController)
+        return topViewController.navigationController?.popToViewController(endVC, animated: animated)
+    }
+    
+    // ---- PopToPrevious Functions
+    @discardableResult
+    public static func popToPrevious(animated : Bool = true)->UIViewController?{
+        return popToPrevious(with: nil, animated: animated)
+    }
+    
+    @discardableResult
+    public static func popToPrevious(withData data : [String : Any], animated : Bool)->UIViewController?{
+        return popToPrevious(with: data, animated: animated)
+    }
+    
+    private static func popToPrevious(with data: [String : Any]? = nil, animated : Bool)->UIViewController?{
+        if let data = data{
+            guard let navBarController = topViewController.navigationController else{
+                SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
+                return nil
+            }
+            let secondTopMostViewController = navBarController.childViewControllers[navBarController.childViewControllers.count - 2]
+            callBack(data: data, to: secondTopMostViewController, from: topViewController)
+        }
+        return topViewController.navigationController?.popViewController(animated: animated)
+    }
+    
+    // ------ PopToRoot Functions
+    @discardableResult
+    public static func popToRoot(animated : Bool)->[UIViewController]?{
+        return popToRoot(with: nil, animated: animated)
+    }
+    
+    @discardableResult
+    public static func popToRoot(withData data : [String : Any], animated: Bool)->[UIViewController]?{
+        return popToRoot(with: data, animated: animated)
+    }
+    
+    private static func popToRoot(with data : [String : Any]? = nil, animated : Bool)->[UIViewController]?{
+        if let data = data{
+            guard let navBarController = topViewController.navigationController else{
+                SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
+                return nil
+            }
+            let endVC = navBarController.childViewControllers[0]
+            callBack(data: data, to: endVC, from: topViewController)
+        }
+        return topViewController.navigationController?.popToRootViewController(animated: animated)
+    }
+}
 //
 //// MARK: - Presentation: Single ViewController
 //extension SceneCoordinator{
