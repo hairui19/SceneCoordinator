@@ -35,7 +35,7 @@ The purpose of SceneCoordinator is to simplify navigation among UIViewController
 
 Examples:
 ```swift
-// Push Operation with data 
+// Push Operation
 SceneCoordinator<Main>.push(to: .firstViewController, animated: true)
 
 // Presen Operation 
@@ -78,6 +78,11 @@ extension Main : SceneType{
 
 <img width="256" alt="screen shot 2018-09-21 at 4 21 20 pm" src="https://user-images.githubusercontent.com/24172260/45869353-d6cb1400-bdba-11e8-9977-2e4f58cf3392.png">
 
+Now, you can navigate to whatever viewControllers which are defined in `Main`. 
+Example: 
+```swift 
+SceneCoordinator<Main>.push(to: .first, animated: true)
+```
 
 ### Passing Data
 `push`, `present` and `Tab.select` all have overload functions that accept a data parameter which is in `[String : Any]` format. 
