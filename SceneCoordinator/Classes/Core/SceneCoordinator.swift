@@ -331,6 +331,32 @@ extension SceneCoordinator{
     }
     
 }
+
+// MARK: - TabBar Selection
+extension SceneCoordinator where T == Tab{
+    // selecting viewController
+    private static func select(_ index : Int, with data: [String: Any]?){
+        let currentViewControllerName = String(describing: type(of: topViewController.self))
+        if var data = data{
+            data[actionSceneKey] = String(describing: type(of: topViewController.self))
+        }
+        topViewController.tabBarController?.selectedIndex = index
+        if var data = data{
+            data[actionSceneKey] = currentViewControllerName
+            topViewController.willRevealOnInterface(with: data)
+        }
+        return
+    }
+    
+    public static func select(_ index : Int, withData data: [String: Any]){
+        select(index, with: data)
+    }
+    
+    public static func select(_ index: Int){
+        select(index, with: nil)
+    }
+    
+}
 //
 //// MARK: - Presentation: TabBar
 //extension SceneCoordinator{

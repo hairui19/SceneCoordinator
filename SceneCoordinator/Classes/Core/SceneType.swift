@@ -42,3 +42,18 @@ public enum Nav : SceneType{
         return nil
     }
 }
+
+/// TabBarController placeholder type for selection function
+public enum Tab : SceneType{
+    public var storyboard: String{
+        return ""
+    }
+    
+    public var viewControllerType: UIViewController.Type{
+        return UIViewController.self
+    }
+    
+    public var storyboardBundle: Bundle?{
+        return nil
+    }
+}
