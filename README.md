@@ -36,7 +36,7 @@ The purpose of SceneCoordinator is to simplify navigation among UIViewController
 Examples:
 ```swift
 // Push Operation with data 
-SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
+SceneCoordinator<Main>.push(to: .firstViewController, animated: true)
 
 // Presen Operation 
 SceneCoordinator<PresentNav>.presentNav(with: .navFirstChildViewController, animated: true)
@@ -52,7 +52,7 @@ SceneCoordinator<Tab>.select(1)
 ```
 
 ### Set Up
-Setup, ideally an enum, and conform it to `SceneType`
+Setup, ideally an enum, and conform it to `SceneType`:
 ```swift
 enum Main{
     case first
@@ -69,14 +69,24 @@ extension Main : SceneType{
     }
 }
 ```
-
 Note: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform 
 - `dismiss` function for `Nav`
 - `selectTab` function for `Tab`
 
-### Passing data to present/pushed viewController 
-`push` and `present` both have overload functions that accept a data parameter which is in `[String : Any]` format. 
+### Passing Data
+`push`, `present` and `Tab.select` all have overload functions that accept a data parameter which is in `[String : Any]` format. 
+```swift
+// push
+SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
 
+// present
+SceneCoordinator<PresentSingleView>.presentView(scene: .presentSingleFirstViewController, withData: ["data" : text], animated: true)
+
+// Tab.select
+SceneCoordinator<Tab>.select(2, withData: ["push" : true])
+```
+
+### Retrieving Data
 Override `willMoveToInterface` in ViewController to retrieve data from `push`, `present` and `Tab.select` operations.
 ```swift
 override func willMoveToInterface(with data: [String : Any]) {
@@ -100,6 +110,15 @@ override func willRevealOnInterface(with data: [String : Any]) {
         }
 }
 ```
+
+### Full list of operations:
+
+- `push`
+- `pop`
+- `present`
+- `presentNav` (viewControllers will be embeded in the type of UINavigationController specified)
+- `dismiss` (only available through `SceneCoordinator<Nav>`)
+- `select` (only available through `SceneCoordinator<Tab>`)
 
 
 ## Author
