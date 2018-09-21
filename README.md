@@ -71,12 +71,11 @@ extension Main : SceneType{
 }
 ```
 **_Note1: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform_**
+- `dismiss` function for `Nav`
+- `selectTab` function for `Tab`
 
 **_Note2: The framework gets the UIViewControllers from storyboard via their IDs, so please name every UIViewController's storyboardID the same as the class name_**
 
-
-- `dismiss` function for `Nav`
-- `selectTab` function for `Tab`
 
 ### Passing Data
 `push`, `present` and `Tab.select` all have overload functions that accept a data parameter which is in `[String : Any]` format. 
