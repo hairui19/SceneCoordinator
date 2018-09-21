@@ -500,29 +500,29 @@ extension SceneCoordinator{
 //    
 //}
 //
-//// MARK: -Present & Dismiss
-//extension SceneCoordinator{
-//    
-//    public static func dismiss(animated : Bool){
-//        dismiss(with: nil, animated: true)
-//    }
-//    
-//    /// The data is passed to the topMostViewController of the revealing interface
-//    public static func dismiss(withData data : [String : Any], animated : Bool){
-//        dismiss(with: data, animated: true)
-//    }
-//    
-//    private static func dismiss(with data : [String : Any]?, animated : Bool){
-//        if let data = data{
-//            guard let topMostViewController = Spider.shared.topMostViewControllerOfPreviousNode else{
-//                return
-//            }
-//            callBack(data: data, for: topMostViewController)
-//        }
-//        topViewController.dismiss(animated: animated) {
-//            Spider.shared.deleteCurrentInterface()
-//        }
-//    }
-//}
+// MARK: -Present & Dismiss
+extension SceneCoordinator where T == Nav{
+    
+    public static func dismiss(animated : Bool){
+        dismiss(with: nil, animated: true)
+    }
+    
+    /// The data is passed to the topMostViewController of the revealing interface
+    public static func dismiss(withData data : [String : Any], animated : Bool){
+        dismiss(with: data, animated: true)
+    }
+    
+    private static func dismiss(with data : [String : Any]?, animated : Bool){
+        if let data = data{
+            guard let topMostViewController = Spider.shared.topMostViewControllerOfPreviousNode else{
+                return
+            }
+            callBack(data: data, to: topMostViewController, from: topViewController)
+        }
+        topViewController.dismiss(animated: animated) {
+            Spider.shared.deleteCurrentInterface()
+        }
+    }
+}
 
 

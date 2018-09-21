@@ -26,3 +26,19 @@ public protocol SceneType{
 //    var type : class {get}
 
 }
+
+
+/// NavigationController placeholder type for dismiss function
+public enum Nav : SceneType{
+    public var storyboard: String{
+        return ""
+    }
+    
+    public var viewControllerType: UIViewController.Type{
+        return UIViewController.self
+    }
+    
+    public var storyboardBundle: Bundle?{
+        return nil
+    }
+}
