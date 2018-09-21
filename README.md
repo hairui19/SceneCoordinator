@@ -74,7 +74,7 @@ Note: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `
 - `selectTab` function for `Tab`
 
 ### Passing data to present/pushed viewController 
-Push and present both have overload functions that accept a data parameter which is in `[String : Any]` format. 
+`push` and `present` both have overload functions that accept a data parameter which is in `[String : Any]` format. 
 
 Override `willMoveToInterface` in ViewController to retrieve data from `push`, `present` and `Tab.select` operations.
 ```swift
@@ -90,7 +90,7 @@ override func willMoveToInterface(with data: [String : Any]) {
 }
 ```
 
-Override `willRevealOnInterface` to retrive data from `pop` and `Nav.dismiss` data
+Override `willRevealOnInterface` to retrive data from `pop` and `Nav.dismiss` operations.
 
 ```swift
 override func willRevealOnInterface(with data: [String : Any]) {
