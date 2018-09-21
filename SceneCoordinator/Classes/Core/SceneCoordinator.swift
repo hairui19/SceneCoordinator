@@ -168,7 +168,7 @@ extension SceneCoordinator{
     @discardableResult
     public static func present(
         scene : T,
-        withData data : Any,
+        withData data : [String : Any],
         animated : Bool
         )->UIViewController{
         return present(scene: scene, withData: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
@@ -185,7 +185,7 @@ extension SceneCoordinator{
     
     public static func present(
         scene : T,
-        withData data : Any,
+        withData data : [String : Any],
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool

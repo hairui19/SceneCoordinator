@@ -23,6 +23,10 @@
 		FE8A838921539C830089A3B7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838221539C830089A3B7 /* FirstViewController.swift */; };
 		FE8A838C21539CAC0089A3B7 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838B21539CAB0089A3B7 /* Main.swift */; };
 		FE8A839021539CE20089A3B7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838F21539CE20089A3B7 /* UITableView+Extension.swift */; };
+		FE8A839921548E190089A3B7 /* PresentSingleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8A839821548E190089A3B7 /* PresentSingleView.storyboard */; };
+		FE8A839B21548E4A0089A3B7 /* PresentSingleFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */; };
+		FE8A839D21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */; };
+		FE8A839F21548F580089A3B7 /* PresentSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839E21548F580089A3B7 /* PresentSingleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		FE8A838221539C830089A3B7 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FE8A838B21539CAB0089A3B7 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		FE8A838F21539CE20089A3B7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		FE8A839821548E190089A3B7 /* PresentSingleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PresentSingleView.storyboard; sourceTree = "<group>"; };
+		FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleFirstViewController.swift; sourceTree = "<group>"; };
+		FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleViewExampleViewController.swift; sourceTree = "<group>"; };
+		FE8A839E21548F580089A3B7 /* PresentSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSingleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +137,11 @@
 		607FACD21AFB9204008FA782 /* Example for SceneCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				FE8A839721548DDE0089A3B7 /* Storyboards */,
 				FE8A838E21539CD50089A3B7 /* Extensions */,
 				FE8A838D21539CC30089A3B7 /* Scenes */,
 				FE8A838A21539C890089A3B7 /* ViewControllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -181,12 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				FE8A837C21539C820089A3B7 /* MainViewController.swift */,
-				FE8A838221539C830089A3B7 /* FirstViewController.swift */,
-				FE8A838021539C820089A3B7 /* FourthViewController.swift */,
-				FE8A837E21539C820089A3B7 /* PushAndPopBaseViewController.swift */,
-				FE8A837D21539C820089A3B7 /* PushAndPopExampleViewController.swift */,
-				FE8A837F21539C820089A3B7 /* SecondViewController.swift */,
-				FE8A838121539C830089A3B7 /* ThirdViewController.swift */,
+				FE8A839521548DB00089A3B7 /* Push And Pop */,
+				FE8A839621548DC80089A3B7 /* PresentSingleView */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FE8A838B21539CAB0089A3B7 /* Main.swift */,
+				FE8A839E21548F580089A3B7 /* PresentSingleView.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -205,6 +210,37 @@
 				FE8A838F21539CE20089A3B7 /* UITableView+Extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		FE8A839521548DB00089A3B7 /* Push And Pop */ = {
+			isa = PBXGroup;
+			children = (
+				FE8A838221539C830089A3B7 /* FirstViewController.swift */,
+				FE8A838021539C820089A3B7 /* FourthViewController.swift */,
+				FE8A837E21539C820089A3B7 /* PushAndPopBaseViewController.swift */,
+				FE8A837D21539C820089A3B7 /* PushAndPopExampleViewController.swift */,
+				FE8A837F21539C820089A3B7 /* SecondViewController.swift */,
+				FE8A838121539C830089A3B7 /* ThirdViewController.swift */,
+			);
+			name = "Push And Pop";
+			sourceTree = "<group>";
+		};
+		FE8A839621548DC80089A3B7 /* PresentSingleView */ = {
+			isa = PBXGroup;
+			children = (
+				FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */,
+				FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */,
+			);
+			name = PresentSingleView;
+			sourceTree = "<group>";
+		};
+		FE8A839721548DDE0089A3B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				FE8A839821548E190089A3B7 /* PresentSingleView.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				FE8A839921548E190089A3B7 /* PresentSingleView.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -370,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE8A839B21548E4A0089A3B7 /* PresentSingleFirstViewController.swift in Sources */,
 				FE8A839021539CE20089A3B7 /* UITableView+Extension.swift in Sources */,
 				FE8A838C21539CAC0089A3B7 /* Main.swift in Sources */,
 				FE8A838921539C830089A3B7 /* FirstViewController.swift in Sources */,
@@ -377,6 +415,8 @@
 				FE8A838321539C830089A3B7 /* MainViewController.swift in Sources */,
 				FE8A838521539C830089A3B7 /* PushAndPopBaseViewController.swift in Sources */,
 				FE8A838721539C830089A3B7 /* FourthViewController.swift in Sources */,
+				FE8A839D21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift in Sources */,
+				FE8A839F21548F580089A3B7 /* PresentSingleView.swift in Sources */,
 				FE8A838421539C830089A3B7 /* PushAndPopExampleViewController.swift in Sources */,
 				FE8A838821539C830089A3B7 /* ThirdViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
