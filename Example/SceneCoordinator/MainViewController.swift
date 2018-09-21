@@ -19,7 +19,8 @@ class MainViewController : UIViewController{
         "Push & Pop",
         "Present and Dismiss (Single UIViewController)",
         "Present and Dismiss (With NavigationController)",
-        "Present and Dismiss (With UITabBarControler)"
+        "Select Tab First",
+        "Select Tab Second"
     ]
     
     // MARK: - View Life Cycle
@@ -40,10 +41,6 @@ extension MainViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        
-        
     }
 }
 
@@ -64,6 +61,9 @@ extension MainViewController : UITableViewDelegate{
         case 2:
             SceneCoordinator<PresentNav>.push(to: .presentNavExampleViewController, animated: true)
         case 3:
+            SceneCoordinator<Tab>.select(1)
+        case 4:
+            SceneCoordinator<Tab>.select(2, withData: ["push" : true])
             break
         default:
             break

@@ -15,6 +15,7 @@ enum Main{
     case secondViewController
     case thirdViewController
     case fourthViewController
+    case tabTwoPushedViewController
 }
 
 extension Main : SceneType{
@@ -22,20 +23,6 @@ extension Main : SceneType{
         return "Main"
     }
     
-    var storyboardID: String {
-        switch self{
-        case .mainViewController:
-            return "MainViewController"
-        case .firstViewController:
-            return "FirstViewController"
-        case .secondViewController:
-            return "SecondViewController"
-        case .thirdViewController:
-            return "ThirdViewController"
-        case .fourthViewController:
-            return "FourthViewController"
-        }
-    }
     
     var storyboardBundle: Bundle? {
         return nil 
@@ -53,6 +40,8 @@ extension Main : SceneType{
             return ThirdViewController.self
         case .fourthViewController:
             return FourthViewController.self
+        case .tabTwoPushedViewController:
+            return TabTwoPushedViewController.self
         }
     }
     
