@@ -162,7 +162,7 @@ extension SceneCoordinator{
         scene : T,
         animated : Bool
         )->UIViewController{
-        return present(scene: scene, withData: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+        return present(scene: scene, with: nil, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
     }
     
     @discardableResult
@@ -171,7 +171,7 @@ extension SceneCoordinator{
         withData data : [String : Any],
         animated : Bool
         )->UIViewController{
-        return present(scene: scene, withData: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
+        return present(scene: scene, with: data, withTransitionStyle: .default, withPresentationStyle: .default, animated: animated)
     }
     
     public static func present(
@@ -180,7 +180,7 @@ extension SceneCoordinator{
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool
         )->UIViewController{
-        return present(scene: scene, withData: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+        return present(scene: scene, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     
     public static func present(
@@ -190,12 +190,12 @@ extension SceneCoordinator{
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool
         )->UIViewController{
-        return present(scene: scene, withData: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
+        return present(scene: scene, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     
     private static func present(
         scene : T,
-        withData data : [String : Any]?,
+        with data : [String : Any]?,
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool
