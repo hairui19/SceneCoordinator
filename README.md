@@ -52,7 +52,8 @@ SceneCoordinator<Tab>.select(1)
 ```
 
 ### Set Up
-Setup, ideally an enum, and conform it to `SceneType`:
+Setup, ideally an enum, and conform it to `SceneType` :
+
 ```swift
 enum Main{
     case first
@@ -69,7 +70,11 @@ extension Main : SceneType{
     }
 }
 ```
-Note: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform 
+_Note1: you don't have to create `Nav` and `Tab` sceneTypes. They are defined by `SceneCoordinator` framework by default to perform _**
+
+_Note2: The framework gets the UIViewControllers from storyboard via their IDs, so please name every UIViewController's storyboardID the same as the class name _**
+
+
 - `dismiss` function for `Nav`
 - `selectTab` function for `Tab`
 
