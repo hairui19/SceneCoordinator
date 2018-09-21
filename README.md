@@ -10,6 +10,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* iOS 10.0 and later
+* Xcode 9.0 and later
+* Swift 4.0
 
 ## Installation
 
@@ -20,9 +23,38 @@ it, simply add the following line to your Podfile:
 pod 'SceneCoordinator'
 ```
 
+## Usage
+```swift
+    SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
+```
+
+### Coordinating between views
+```swift
+
+```
+
+### Coordinating between views
+
+All gestures are available via special variables that you can call on any `UIView` instance. Examples:
+
+```swift
+
+```
+
+Full list of available gestures:
+
+- `onTap`
+- `onLongPress`
+- `onPan`
+- `onPinch`
+- `onRotation`
+- `onSwipe`
+- `onScreenEdgePan`
+
+
 ## Author
 
-linhairui19@gmail.com, hairui@sorealprop.com
+linhairui. Email: linhairui19@gmail.com
 
 ## License
 
