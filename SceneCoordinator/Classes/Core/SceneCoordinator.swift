@@ -158,7 +158,7 @@ extension SceneCoordinator{
     // ----- present a normal UIViewController
     
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         animated : Bool
         )->UIViewController{
@@ -166,7 +166,7 @@ extension SceneCoordinator{
     }
     
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         withData data : [String : Any],
         animated : Bool
@@ -175,7 +175,7 @@ extension SceneCoordinator{
     }
     
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
@@ -184,7 +184,7 @@ extension SceneCoordinator{
         return present(scene: scene, with: nil, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         transitionDelegate transition : UIViewControllerTransitioningDelegate,
         animated : Bool
@@ -193,7 +193,7 @@ extension SceneCoordinator{
     }
     
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         withData data : [String : Any],
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
@@ -204,7 +204,7 @@ extension SceneCoordinator{
     }
     
     @discardableResult
-    public static func present(
+    public static func presentView(
         scene : T,
         withData data : [String : Any],
         transitionDelegate transition : UIViewControllerTransitioningDelegate,
