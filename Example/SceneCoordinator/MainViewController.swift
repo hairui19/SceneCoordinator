@@ -60,8 +60,7 @@ extension MainViewController : UITableViewDelegate{
         case 0:
             SceneCoordinator<Main>.push(to: .firstViewController, withData: ["data" : "FromMain"], animated: true)
         case 1:
-            break
-//            SceneCoordinator<Main>.presentNavBar(with: .firstViewController, .secondViewController, in: UINavigationController.self, withData: [:], animated: true)
+            SceneCoordinator<PresentSingleView>.push(to: .presentSingleViewExampleViewController, animated: true)
         case 2:
             break
         case 3:
