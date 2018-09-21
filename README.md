@@ -61,12 +61,15 @@ enum Main{
 
 extension Main : SceneType{
     var storyboard: String {
+        return "Main"
     }
 
     var viewControllerType: UIViewController.Type {
+        return FirstViewController.self
     }
 
     var storyboardBundle: Bundle? {
+        return nil 
     }
 }
 ```
