@@ -68,7 +68,7 @@ extension SceneCoordinator{
     
     private static func push(to scene : T, with data : [String : Any]? = nil, animated : Bool)->UIViewController{
         let viewController = create(viewControllerWith: scene, with: data)
-        topViewController.navigationController?.pushViewController(viewController, animated: true)
+        topViewController.navigationController?.pushViewController(viewController, animated: animated)
         return viewController
     }
 }
@@ -108,7 +108,7 @@ extension SceneCoordinator{
     
     // ---- PopToPrevious Functions
     @discardableResult
-    public static func popToPrevious(animated : Bool = true)->UIViewController?{
+    public static func popToPrevious(animated : Bool)->UIViewController?{
         return popToPrevious(with: nil, animated: animated)
     }
     
@@ -378,7 +378,7 @@ extension SceneCoordinator{
         withTransitionStyle transitionStyle: SceneModalTransitionStyle,
         withPresentationStyle presentationStyle: SceneModalPresentationStyle,
         animated : Bool)->UINavigationController{
-        return presentNav(with: scene, in: navigationControllerType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: true)
+        return presentNav(with: scene, in: navigationControllerType, with: data, withTransitionStyle: transitionStyle, withPresentationStyle: presentationStyle, animated: animated)
     }
     
     // ----------- function with transition parameter
@@ -452,12 +452,12 @@ extension SceneCoordinator where T == Tab{
 extension SceneCoordinator where T == Nav{
     
     public static func dismiss(animated : Bool){
-        dismiss(with: nil, animated: true)
+        dismiss(with: nil, animated: animated)
     }
     
     /// The data is passed to the topMostViewController of the revealing interface
     public static func dismiss(withData data : [String : Any], animated : Bool){
-        dismiss(with: data, animated: true)
+        dismiss(with: data, animated: animated)
     }
     
     private static func dismiss(with data : [String : Any]?, animated : Bool){
