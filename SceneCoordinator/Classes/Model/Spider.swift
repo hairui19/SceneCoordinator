@@ -16,13 +16,16 @@ internal class Spider{
     private var currentInterface : UIViewController!
     
     private init(){
-        guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController else{
+        guard var topInterface = UIApplication.shared.keyWindow?.rootViewController else{
             fatalError("RootViewController Does Not Exist")
         }
         interfaceStack = Stack()
-        interfaceStack.push(rootViewController)
-        currentInterface = rootViewController
-
+        interfaceStack.push(topInterface)
+        while let presentedInterface = topInterface.presentedViewController {
+            topInterface = presentedInterface
+            interfaceStack.push(topInterface)
+        }
+        currentInterface = interfaceStack.topMostInterface
     }
 }
 
