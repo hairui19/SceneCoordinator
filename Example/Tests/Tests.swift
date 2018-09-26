@@ -14,15 +14,28 @@ class Tests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // 1. Do A normal push
+        SceneCoordinator<Main>.push(to: .mainViewController, animated: true)
+        XCTAssertEqual(SceneCoordinator<Main>.description, "0: UITabBarController \n")
+        
+        // 2. Do a Presentation
+        SceneCoordinator<Main>.presentView(scene: .firstViewController, animated: true)
+        SceneCoordinator<Main>.push(to: .secondViewController, animated: true)
+        XCTAssertEqual(SceneCoordinator<Main>.description, "0: UITabBarController \n1: FirstViewController \n")
+        
+        // 3. Do a NavBar Navigation
+        SceneCoordinator<Main>.presentNav(with: .firstViewController, animated: true)
+        XCTAssertEqual(SceneCoordinator<Main>.description, "0: UITabBarController \n1: FirstViewController \n2: UINavigationController \n")
+        
+        // 3. Dismiss
+        SceneCoordinator<Nav>.dismiss(animated: true)
+        XCTAssertEqual(SceneCoordinator<Main>.description, "0: UITabBarController \n1: FirstViewController \n")
+        
+        // 4. Dismiss Again
+        SceneCoordinator<Nav>.dismiss(animated: true)
+        XCTAssertEqual(SceneCoordinator<Main>.description, "0: UITabBarController \n")
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }
