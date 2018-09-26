@@ -228,9 +228,8 @@ extension SceneCoordinator{
         presentedViewController.modalTransitionStyle = transitionStyle.value
         presentedViewController.modalPresentationStyle = presentationStyle.value
         
-        topViewController.present(presentedViewController, animated: animated) {
-            Spider.shared.addNewInterface(presentedViewController)
-        }
+        topViewController.present(presentedViewController, animated: animated)
+        Spider.shared.addNewInterface(presentedViewController)
         return presentedViewController
     }
     
@@ -243,9 +242,8 @@ extension SceneCoordinator{
         let presentedViewController = create(viewControllerWith: scene, with: data)
         presentedViewController.modalPresentationStyle = .custom
         presentedViewController.transitioningDelegate = transition
-        topViewController.present(presentedViewController, animated: animated) {
-            Spider.shared.addNewInterface(presentedViewController)
-        }
+        topViewController.present(presentedViewController, animated: animated)
+        Spider.shared.addNewInterface(presentedViewController)
         return presentedViewController
     }
 }
@@ -279,9 +277,9 @@ extension SceneCoordinator{
         let navBarController = createNav(with: scene, in: navBarType, with: data)
         navBarController.modalTransitionStyle = transitionStyle.value
         navBarController.modalPresentationStyle = presentationStyle.value
-        topViewController.present(navBarController, animated: animated) {
-            Spider.shared.addNewInterface(navBarController)
-        }
+        
+        topViewController.present(navBarController, animated: animated)
+        Spider.shared.addNewInterface(navBarController)
         return navBarController
     }
     
@@ -295,9 +293,9 @@ extension SceneCoordinator{
         let navBarController = createNav(with: scene, in: navBarType, with: data)
         navBarController.modalPresentationStyle = .custom
         navBarController.transitioningDelegate = transition
-        topViewController.present(navBarController, animated: animated) {
-            Spider.shared.addNewInterface(navBarController)
-        }
+        
+        topViewController.present(navBarController, animated: animated)
+        Spider.shared.addNewInterface(navBarController)
         return navBarController
     }
     
@@ -471,9 +469,8 @@ extension SceneCoordinator where T == Nav{
             }
             callBack(data: data, to: topMostViewController, from: topViewController)
         }
-        topViewController.dismiss(animated: animated) {
-            Spider.shared.deleteCurrentInterface()
-        }
+        topViewController.dismiss(animated: animated)
+        Spider.shared.deleteCurrentInterface()
     }
 }
 
