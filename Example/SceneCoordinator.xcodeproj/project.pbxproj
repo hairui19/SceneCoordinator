@@ -36,6 +36,30 @@
 		FE8A83A621549F820089A3B7 /* NavFirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A521549F820089A3B7 /* NavFirstChildViewController.swift */; };
 		FE8A83A821549FC30089A3B7 /* NavSecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A721549FC30089A3B7 /* NavSecondChildViewController.swift */; };
 		FE8A83AA2154A01E0089A3B7 /* PresentNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A92154A01E0089A3B7 /* PresentNav.swift */; };
+		FEEBDEC9215B5BE2004E2C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		FEEBDECA215B5BE7004E2C4E /* PresentSingleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8A839821548E190089A3B7 /* PresentSingleView.storyboard */; };
+		FEEBDECB215B5BEA004E2C4E /* PresentNav.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8A83A321549F520089A3B7 /* PresentNav.storyboard */; };
+		FEEBDECC215B5BED004E2C4E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838F21539CE20089A3B7 /* UITableView+Extension.swift */; };
+		FEEBDECD215B5BF1004E2C4E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838B21539CAB0089A3B7 /* Main.swift */; };
+		FEEBDECE215B5BF3004E2C4E /* PresentSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839E21548F580089A3B7 /* PresentSingleView.swift */; };
+		FEEBDECF215B5BF5004E2C4E /* PresentNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A92154A01E0089A3B7 /* PresentNav.swift */; };
+		FEEBDED0215B5BF9004E2C4E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837C21539C820089A3B7 /* MainViewController.swift */; };
+		FEEBDED1215B5BFB004E2C4E /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C4F1E2154BC7100D8618C /* CustomTransition.swift */; };
+		FEEBDED2215B5BFE004E2C4E /* TabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C4F212154C58600D8618C /* TabOneViewController.swift */; };
+		FEEBDED3215B5C01004E2C4E /* TabTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C4F232154C59F00D8618C /* TabTwoViewController.swift */; };
+		FEEBDED4215B5C03004E2C4E /* TabTwoPushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C4F252154C5E600D8618C /* TabTwoPushedViewController.swift */; };
+		FEEBDED5215B5C06004E2C4E /* PresentNavExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A121549ED20089A3B7 /* PresentNavExampleViewController.swift */; };
+		FEEBDED6215B5C09004E2C4E /* NavFirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A521549F820089A3B7 /* NavFirstChildViewController.swift */; };
+		FEEBDED7215B5C0B004E2C4E /* NavSecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A83A721549FC30089A3B7 /* NavSecondChildViewController.swift */; };
+		FEEBDED8215B5C0F004E2C4E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838221539C830089A3B7 /* FirstViewController.swift */; };
+		FEEBDED9215B5C11004E2C4E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838021539C820089A3B7 /* FourthViewController.swift */; };
+		FEEBDEDA215B5C14004E2C4E /* PushAndPopBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837E21539C820089A3B7 /* PushAndPopBaseViewController.swift */; };
+		FEEBDEDB215B5C19004E2C4E /* PushAndPopExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837D21539C820089A3B7 /* PushAndPopExampleViewController.swift */; };
+		FEEBDEDC215B5C1B004E2C4E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A837F21539C820089A3B7 /* SecondViewController.swift */; };
+		FEEBDEDD215B5C1D004E2C4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A838121539C830089A3B7 /* ThirdViewController.swift */; };
+		FEEBDEDE215B5C20004E2C4E /* PresentSingleViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839C21548EF40089A3B7 /* PresentSingleViewExampleViewController.swift */; };
+		FEEBDEDF215B5C23004E2C4E /* PresentSingleFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A839A21548E4A0089A3B7 /* PresentSingleFirstViewController.swift */; };
+		FEEBDEE0215B5C26004E2C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +408,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEBDEC9215B5BE2004E2C4E /* Main.storyboard in Resources */,
+				FEEBDECB215B5BEA004E2C4E /* PresentNav.storyboard in Resources */,
+				FEEBDECA215B5BE7004E2C4E /* PresentSingleView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +506,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEBDEE0215B5C26004E2C4E /* AppDelegate.swift in Sources */,
+				FEEBDED4215B5C03004E2C4E /* TabTwoPushedViewController.swift in Sources */,
+				FEEBDEDB215B5C19004E2C4E /* PushAndPopExampleViewController.swift in Sources */,
+				FEEBDECE215B5BF3004E2C4E /* PresentSingleView.swift in Sources */,
+				FEEBDED1215B5BFB004E2C4E /* CustomTransition.swift in Sources */,
+				FEEBDEDD215B5C1D004E2C4E /* ThirdViewController.swift in Sources */,
+				FEEBDED3215B5C01004E2C4E /* TabTwoViewController.swift in Sources */,
+				FEEBDECF215B5BF5004E2C4E /* PresentNav.swift in Sources */,
+				FEEBDECD215B5BF1004E2C4E /* Main.swift in Sources */,
+				FEEBDEDF215B5C23004E2C4E /* PresentSingleFirstViewController.swift in Sources */,
+				FEEBDED7215B5C0B004E2C4E /* NavSecondChildViewController.swift in Sources */,
+				FEEBDED0215B5BF9004E2C4E /* MainViewController.swift in Sources */,
+				FEEBDED2215B5BFE004E2C4E /* TabOneViewController.swift in Sources */,
+				FEEBDED9215B5C11004E2C4E /* FourthViewController.swift in Sources */,
+				FEEBDED6215B5C09004E2C4E /* NavFirstChildViewController.swift in Sources */,
+				FEEBDEDC215B5C1B004E2C4E /* SecondViewController.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				FEEBDED5215B5C06004E2C4E /* PresentNavExampleViewController.swift in Sources */,
+				FEEBDEDE215B5C20004E2C4E /* PresentSingleViewExampleViewController.swift in Sources */,
+				FEEBDEDA215B5C14004E2C4E /* PushAndPopBaseViewController.swift in Sources */,
+				FEEBDECC215B5BED004E2C4E /* UITableView+Extension.swift in Sources */,
+				FEEBDED8215B5C0F004E2C4E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
