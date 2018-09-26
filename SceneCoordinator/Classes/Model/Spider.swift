@@ -64,3 +64,9 @@ extension Spider{
         return popedInterface
     }
 }
+
+extension Spider : CustomStringConvertible{
+    var description: String{
+        return interfaceStack.description
+    }
+}

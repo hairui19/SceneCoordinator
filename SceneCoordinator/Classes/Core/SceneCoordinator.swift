@@ -19,6 +19,10 @@ public class SceneCoordinator<T : SceneType>{
         return Spider.shared.topMostViewController
     }
     
+    public static var description : String{
+        return Spider.shared.description
+    }
+    
     public init(){}
     
 }

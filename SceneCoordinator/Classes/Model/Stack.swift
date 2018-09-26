@@ -41,7 +41,7 @@ extension Stack : CustomStringConvertible{
         
         var text = ""
         for (index, element) in elements.enumerated(){
-            text += "\(index): \(String(describing: element)) \n"
+            text += "\(index): \(String(describing: type(of: element.self))) \n"
         }
         return text
     }
