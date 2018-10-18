@@ -43,7 +43,7 @@ extension Spider{
     
     private func topViewController(from viewController : UIViewController)->UIViewController{
         if let tabBarController = viewController as? UITabBarController{
-            let selectedViewController = tabBarController.childViewControllers[tabBarController.selectedIndex]
+            let selectedViewController = tabBarController.children[tabBarController.selectedIndex]
             return topViewController(from: selectedViewController)
         }else if let navBarController = viewController as? UINavigationController{
             guard let topController = navBarController.topViewController else{

@@ -97,7 +97,7 @@ extension SceneCoordinator{
         }
         
         var endVC : UIViewController!
-        for viewController in navBarController.childViewControllers.reversed(){
+        for viewController in navBarController.children.reversed(){
             if String(describing: type(of: viewController.self)) == String(describing: scene.viewControllerType){
                 endVC = viewController
                 break
@@ -127,7 +127,7 @@ extension SceneCoordinator{
                 SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
                 return nil
             }
-            let secondTopMostViewController = navBarController.childViewControllers[navBarController.childViewControllers.count - 2]
+            let secondTopMostViewController = navBarController.children[navBarController.children.count - 2]
             callBack(data: data, to: secondTopMostViewController, from: topViewController)
         }
         return topViewController.navigationController?.popViewController(animated: animated)
@@ -150,7 +150,7 @@ extension SceneCoordinator{
                 SceneCoordinatorError.ViewControllerIsNotEmbeddedInNavigationController.execute()
                 return nil
             }
-            let endVC = navBarController.childViewControllers[0]
+            let endVC = navBarController.children[0]
             callBack(data: data, to: endVC, from: topViewController)
         }
         return topViewController.navigationController?.popToRootViewController(animated: animated)
@@ -261,7 +261,7 @@ extension SceneCoordinator{
             return create(viewControllerWith: scene, with: nil)
         }
         if let data = data{
-            navBarController.childViewControllers.last?.willMoveToInterface(with: data)
+            navBarController.children.last?.willMoveToInterface(with: data)
         }
         return navBarController
     }
