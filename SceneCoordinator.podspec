@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SceneCoordinator'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A convenient and simple way of navigating to and from ViewControllers
 ."'
 
@@ -33,7 +33,7 @@ A convenient and simple way of navigating to and from ViewControllers.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = "4.0"
+  s.swift_version = "4.2"
   s.source_files = 'SceneCoordinator/Classes/**/*'
   
   # s.resource_bundles = {

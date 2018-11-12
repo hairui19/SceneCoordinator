@@ -435,7 +435,7 @@ extension SceneCoordinator where T == Tab{
         topViewController.tabBarController?.selectedIndex = index
         if var data = data{
             data[actionSceneKey] = currentViewControllerName
-            topViewController.willRevealOnInterface(with: data)
+            topViewController.willMoveToInterface(with: data)
         }
         return
     }
