@@ -467,10 +467,13 @@ extension SceneCoordinator where T == Nav{
             guard let topMostViewController = Spider.shared.topMostViewControllerOfPreviousNode else{
                 return
             }
+            topViewController.dismiss(animated: animated)
+            Spider.shared.deleteCurrentInterface()
             callBack(data: data, to: topMostViewController, from: topViewController)
+        }else{
+            topViewController.dismiss(animated: animated)
+            Spider.shared.deleteCurrentInterface()
         }
-        topViewController.dismiss(animated: animated)
-        Spider.shared.deleteCurrentInterface()
     }
 }
 
